@@ -1,11 +1,100 @@
-<!doctype html>
-<title>Hello</title>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width">
-<style>
- body { font: 1em/1.5 sans-serif; max-width:40em; margin:auto; padding:2em; color:#333; }
- h1 { color:#06c; }
-</style>
-<h1>Hello!</h1>
-<p>I'm <strong>Your Name</strong>.</p>
-<p>I love [your interests].</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Dev Thoughts</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        /* About-specific styles */
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        @media (min-width: 768px) {
+            .profile {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .skill-tag {
+            background: var(--code-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-links a {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Hello, I'm <span style="color: var(--primary);">Goya-23</span></h1>
+            
+            <div class="profile">
+                <img src="/assets/bikepacking.jpg" alt="Profile Picture" class="profile-pic">
+                <div>
+                    <p>A developer of Multiphysics in IC from China. Struggling in geometry.</p>
+                    <h2>My Skills</h2>
+                    <div class="skills">
+                        <span class="skill-tag">Mesh</span>
+                        <span class="skill-tag">FVM</span>
+                        <span class="skill-tag">Computational Geomtry</span>
+                        <span class="skill-tag">Differential Geomtry</span>
+                        <span class="skill-tag">FEM</span>
+                        <span class="skill-tag">A little Topology</span>
+                    </div>
+                    
+                    <h2>Connect With Me</h2>
+                    <div class="social-links">
+                        <a href="https://github.com/Goya-23" aria-label="GitHub">🐙</a>
+                        <a href="mailto:thinkor-@outlook.com" aria-label="Email">✉️</a>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>My Journey</h2>
+            <p>There are CRPG and bikepacking.</p>
+            
+            
+
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Goya-23. Built with ❤️ and vanilla HTML/CSS</p>
+    </footer>
+</body>
+</html>
